@@ -1,0 +1,208 @@
+{
+  "data": {
+    "status": "ok",
+    "totalResults": 70,
+    "articles": [
+      {
+        "source": { "id": "engadget", "name": "Engadget" },
+        "author": "",
+        "title": "iOS 14 review: Finally rid of the grid - Engadget",
+        "description": "iOS 14 arrives without any new iPhone hardware alongside it, which means the focus is firmly on the software innovations and changes. There are big changes for your home screen and apps.",
+        "url": "https://www.engadget.com/ios-14-review-130053409.html",
+        "urlToImage": "https://o.aolcdn.com/images/dims?resize=1200%2C630&crop=1200%2C630%2C0%2C0&quality=95&image_uri=https%3A%2F%2Fs.yimg.com%2Fos%2Fcreatr-uploaded-images%2F2020-09%2F7bdf9fe1-0195-11eb-b8ad-8b0c08cbaef4&client=amp-blogside-v2&signature=731f314994038a5bd4f3528b2fd7f61d4f7cefbe",
+        "publishedAt": "2020-09-29T14:01:21Z",
+        "content": "iOS 14 is particularly interesting because the biggest differences and additions seem, well, optional. I suggest trying them out and seeing which ones resonate. Not all of them did with me, but there… [+13848 chars]"
+      },
+      {
+        "source": { "id": null, "name": "GamesRadar+" },
+        "author": "Connor Sheridan",
+        "title": "Pokemon Sword and Shield The Crown Tundra release date set for October - GamesRadar+",
+        "description": "Prepare for a winter expedition",
+        "url": "https://www.gamesradar.com/pokemon-sword-and-shield-the-crown-tundra-release-date-set-for-october/",
+        "urlToImage": "https://cdn.mos.cms.futurecdn.net/7zu5SpXyTrCYjcb8pjmm8G-1200-80.jpg",
+        "publishedAt": "2020-09-29T13:49:00Z",
+        "content": "The Pokemon Sword and Shield The Crown Tundra release date is official, and it's less than a month away.\r\nThe Pokemon Company shared the Pokemon Sword and Shield The Crown Tundra release date of Octo… [+1275 chars]"
+      },
+      {
+        "source": { "id": "independent", "name": "Independent" },
+        "author": "Andrew Griffin",
+        "title": "Slack down: Chat app not working as users unable to receive and send messages - The Independent",
+        "description": "",
+        "url": "https://www.independent.co.uk/life-style/gadgets-and-tech/slack-down-today-not-working-loading-status-update-fix-messages-b694231.html",
+        "urlToImage": "https://static.independent.co.uk/2020/09/29/14/slack.jpg",
+        "publishedAt": "2020-09-29T13:45:00Z",
+        "content": "Slack has gone down, with users unable to send or receive messages.\r\nThe workplace chat app has become one of the central ways that remote offices collaborate as they work amid lockdowns.\r\nSlack ackn… [+695 chars]"
+      },
+      {
+        "source": { "id": null, "name": "Eurogamer.net" },
+        "author": "Wesley Yin-Poole",
+        "title": "Xbox Game Pass Ultimate on console gets EA Play 10th Nov - Eurogamer.net",
+        "description": null,
+        "url": "https://www.eurogamer.net/articles/2020-09-29-xbox-game-pass-ultimate-on-console-gets-ea-play-10th-nov",
+        "urlToImage": "https://d2skuhm0vrry40.cloudfront.net/2020/articles/2020-09-29-14-18/xbox-game-pass-ultimate-on-console-gets-ea-play-10th-nov-1601385509107.jpg/EG11/resize/1200x-1/xbox-game-pass-ultimate-on-console-gets-ea-play-10th-nov-1601385509107.jpg",
+        "publishedAt": "2020-09-29T13:19:00Z",
+        "content": "Xbox Game Pass Ultimate gets EA Play on Xbox consoles on 10th November, Microsoft has announced.\r\nThat's the same day the Xbox Series X and S launch.\r\nThen, beginning in December, members with an Ult… [+723 chars]"
+      },
+      {
+        "source": { "id": "bbc-news", "name": "BBC News" },
+        "author": "https://www.facebook.com/bbcnews",
+        "title": "Farmville to shut its gates on Facebook at end of year - BBC News",
+        "description": "The game relied on Flash, which will no longer be supported by Facebook after December.",
+        "url": "https://www.bbc.co.uk/news/technology-54339972",
+        "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/3348/production/_114682131_farmville.jpg",
+        "publishedAt": "2020-09-29T13:12:00Z",
+        "content": null
+      },
+      {
+        "source": { "id": "the-verge", "name": "The Verge" },
+        "author": "Jay Peters",
+        "title": "Google Pixel 5 event: rumors and what to expect - The Verge",
+        "description": "Google’s “Launch Night In” hardware event takes place on September 30, and Google has already said that it will be revealing more about new Pixels, which likely include the Pixel 5 and the Pixel 4A 5G, as well as a new Chromecast and a new smart speaker. We’v…",
+        "url": "https://www.theverge.com/2020/9/29/21455547/google-pixel-5-event-4a-5g-chromecast-nest-rumors",
+        "urlToImage": "https://cdn.vox-cdn.com/thumbor/4ekb13TITZeMg5_xNC8m4hFQ-F4=/0x720:5902x3810/fit-in/1200x630/cdn.vox-cdn.com/uploads/chorus_asset/file/21693072/5G_pre_announce__1_.jpg",
+        "publishedAt": "2020-09-29T13:00:00Z",
+        "content": "We should see a lot of new Google hardware\r\nImage: Google\r\nFall hardware season is in full swing, and tomorrow, Google will be showing off some new products at its Launch Night In event. The company … [+8246 chars]"
+      },
+      {
+        "source": { "id": "polygon", "name": "Polygon" },
+        "author": "Charlie Hall",
+        "title": "Elite Dangerous’ Horizons expansion will soon be part of the base game - Polygon",
+        "description": "Elite Dangerous’ big expansion pack, Horizons, will come for free with the base game after Oct. 27. The expansion has been on sale for nearly 5 years already. Those who purchased it previously will get a free cosmetic upgrade for their ships.",
+        "url": "https://www.polygon.com/2020/9/29/21492481/elite-dangerous-horizons-expansion-now-free",
+        "urlToImage": "https://cdn.vox-cdn.com/thumbor/gv4KBTWxpj6x2t0voljBg4o8m3U=/0x75:1920x1080/fit-in/1200x630/cdn.vox-cdn.com/uploads/chorus_asset/file/21919445/elite_srv.jpg",
+        "publishedAt": "2020-09-29T13:00:00Z",
+        "content": "Spacefaring game Elite Dangerous will include its popular expansion content Elite Dangerous: Horizons free of charge with the base game after Oct. 27. The announcement was made Tuesday by the team at… [+1629 chars]"
+      },
+      {
+        "source": { "id": "engadget", "name": "Engadget" },
+        "author": "",
+        "title": "The Arcwave Ion is designed to 'give men a female orgasm' - Engadget",
+        "description": "The company promises a 'female' orgasm with its new toy,",
+        "url": "https://www.engadget.com/arcwave-ion-orgasm-120001618.html",
+        "urlToImage": "https://o.aolcdn.com/images/dims?resize=1200%2C630&crop=1200%2C630%2C0%2C0&quality=95&image_uri=https%3A%2F%2Fs.yimg.com%2Fos%2Fcreatr-uploaded-images%2F2020-09%2Fa8a30ec0-0197-11eb-bd79-653c586250af&client=amp-blogside-v2&signature=467c2d1f30babc4e6b1affa1b1dfc6eaca5bcc0f",
+        "publishedAt": "2020-09-29T12:38:32Z",
+        "content": "Arcwave says that the product has been in testing for more than two years, with a 100-strong panel of testers involved. The company reports orgasms that are more intense than before, with more variab… [+2692 chars]"
+      },
+      {
+        "source": { "id": null, "name": "Forbes" },
+        "author": "Paul Tassi",
+        "title": "There Is No Reason You Shouldn’t Be Playing ‘Genshin Impact’ For Free - Forbes",
+        "description": "I’d seen the Genshin Impact trailers, heard all the “Breath of the Waifu” jokes, as the game combines the signature style of the last Zelda game with…attractive anime characters, and yet what I was not expecting was a game that feels very much coherent and co…",
+        "url": "https://www.forbes.com/sites/paultassi/2020/09/29/there-is-no-reason-you-shouldnt-be-playing-genshin-impact-for-free/",
+        "urlToImage": "https://thumbor.forbes.com/thumbor/fit-in/1200x0/filters%3Aformat%28jpg%29/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F5f7320fbad583ae941142a2e%2F0x0.jpg",
+        "publishedAt": "2020-09-29T12:06:00Z",
+        "content": "Genshin Impact\r\nmiHoYo\r\nIll admit, I was skeptical. I had little interest in Genshin Impact before yesterday. Id seen the trailers, heard all the Breath of the Waifu jokes, as the game combines the s… [+5121 chars]"
+      },
+      {
+        "source": { "id": null, "name": "Push Square" },
+        "author": "Push Square",
+        "title": "Sony Begins Advertising Spider-Man Films as PS5 Essentials - Push Square",
+        "description": "Homecoming, Far from Home, and Into the Spider-Verse",
+        "url": "https://www.pushsquare.com/news/2020/09/sony_begins_advertising_spider-man_films_as_ps5_essentials",
+        "urlToImage": "https://images.pushsquare.com/1f7a5887d7117/1280x720.jpg",
+        "publishedAt": "2020-09-29T12:00:00Z",
+        "content": "Sony clearly loves the grasp it has on the Spider-Man IP, and so alongside the upcoming Marvel's Spider-Man: Miles Morales, it will also begin advertising the recent films based on the character as \"… [+860 chars]"
+      },
+      {
+        "source": { "id": null, "name": "GamesRadar+" },
+        "author": "Ben Tyrer",
+        "title": "PS5 might not arrive till 2021 for some GameStop Ireland customers - GamesRadar+",
+        "description": "Retailer's admission follows reports of some customers not getting day one stock",
+        "url": "https://www.gamesradar.com/ps5-might-not-arrive-till-2021-for-some-gamestop-ireland-customers/",
+        "urlToImage": "https://cdn.mos.cms.futurecdn.net/EkCF9fFxDrTgFbVEXYV8Sk-1200-80.jpg",
+        "publishedAt": "2020-09-29T11:45:00Z",
+        "content": "Gamestop Ireland has informed some customers that their pre-ordered PS5 might not arrive until 2021. \r\nAn email seen by VGC comes with a message that says: \"Unfortunately, due to circumstances out of… [+1785 chars]"
+      },
+      {
+        "source": { "id": "engadget", "name": "Engadget" },
+        "author": "",
+        "title": "The Morning After: Our first impressions of the Xbox Series X - Engadget",
+        "description": "The Xbox Series X is here, Dell's XPS line got an update and there's a foldable-screen PC.",
+        "url": "https://www.engadget.com/xbox-series-x-thinkpad-fold-tma-111558636.html",
+        "urlToImage": "https://o.aolcdn.com/images/dims?resize=1200%2C630&crop=1200%2C630%2C0%2C0&quality=95&image_uri=https%3A%2F%2Fs.yimg.com%2Fos%2Fcreatr-uploaded-images%2F2020-09%2Ffab3bdc1-0243-11eb-b737-106eddcddabb&client=amp-blogside-v2&signature=28d53035643e156860dc00be58bc5a084dbf2a9b",
+        "publishedAt": "2020-09-29T11:36:34Z",
+        "content": "We’re still not sure if foldable phones are a real improvement over existing tech, but Lenovo is already pushing forward with a foldable PC. It’s different from your average laptop or 2-in-1 because … [+2844 chars]"
+      },
+      {
+        "source": { "id": null, "name": "HEXUS" },
+        "author": "Mark Tyson",
+        "title": "AMD Ryzen 7 5800X CPU (Zen 3, Vermeer) test in AoTS leaked - CPU - News - HEXUS",
+        "description": "Results cast a shadow on the Intel i9-10900K. The Zen 3 launch event is on Thursday, 8th Oct.",
+        "url": "https://hexus.net/tech/news/cpu/145819-amd-ryzen-7-5800x-cpu-zen-3-vermeer-test-aots-leaked/",
+        "urlToImage": "https://hexus.net/media/uploaded/2020/9/f259bef9-95c1-4c04-a7fc-4b6c59be1bb4.jpg",
+        "publishedAt": "2020-09-29T11:11:00Z",
+        "content": "The AMD Zen 3 CPUs launch event is less than 10 days away (Thursday, 8th October) but it has been relatively quiet on leaked specs and benchmarks front. Meanwhile there is quite a lot of excitement b… [+1876 chars]"
+      },
+      {
+        "source": { "id": null, "name": "Sky.com" },
+        "author": "Sky",
+        "title": "Apple's share price rises as iPhone 12 rumours grow - what's the gossip? - Sky News",
+        "description": "Four new smartphone models are expected to be launched by Apple in October, giving investors confidence in the company.",
+        "url": "https://news.sky.com/story/apples-share-price-rises-as-iphone-12-rumours-grow-whats-the-gossip-12084968",
+        "urlToImage": "https://e3.365dm.com/20/09/1600x900/skynews-iphone-11-iphone-apple_5112523.png?20200929094746",
+        "publishedAt": "2020-09-29T11:03:11Z",
+        "content": null
+      },
+      {
+        "source": { "id": null, "name": "Eurogamer.net" },
+        "author": "Emma Kent",
+        "title": "Crusader Kings 3 outlaws \"North Korea mode\" in major patch - Eurogamer.net",
+        "description": null,
+        "url": "https://www.eurogamer.net/articles/2020-09-29-crusader-kings-3-nukes-north-korea-mode-in-major-patch",
+        "urlToImage": "https://d2skuhm0vrry40.cloudfront.net/2020/articles/2020-09-29-11-44/crusader-kings-3-nukes-north-korea-mode-in-major-patch-1601376268629.jpg/EG11/resize/1200x-1/crusader-kings-3-nukes-north-korea-mode-in-major-patch-1601376268629.jpg",
+        "publishedAt": "2020-09-29T10:53:00Z",
+        "content": "Like any grand strategy game, systems get real complicated real fast in Crusader Kings 3, so it's little wonder that Paradox Interactive has taken player feedback on board to introduce a raft of chan… [+3177 chars]"
+      },
+      {
+        "source": { "id": null, "name": "Nintendo Life" },
+        "author": "Nintendo Life",
+        "title": "Fantasy Sci-Fi MMORPG Skyforge Is Coming To Nintendo Switch - Nintendo Life",
+        "description": "\"An amazing universe of gods and monsters\"",
+        "url": "https://www.nintendolife.com/news/2020/09/fantasy_sci-fi_mmorpg_skyforge_is_coming_to_nintendo_switch",
+        "urlToImage": "https://images.nintendolife.com/bf21534ae9420/1280x720.jpg",
+        "publishedAt": "2020-09-29T10:50:00Z",
+        "content": "MY.GAMES and Allods Team have announced that Skyforge, a free-to-play MMO, is coming to Nintendo Switch this fall.\r\nThe game has players taking on the roles of Immortals, powerful god-like beings des… [+1660 chars]"
+      },
+      {
+        "source": { "id": null, "name": "Mirror Online" },
+        "author": "Mark Branagan",
+        "title": "Estate agents struggling to sell house by graveyard add plot to entice buyers - Mirror Online",
+        "description": "The three-bedroom £250,000 home in Malton, North Yorkshire, comes with a plot in the graveyard as an \"unusual\" optional extra \"should the owner wish to have this included\"",
+        "url": "https://www.mirror.co.uk/news/uk-news/estate-agents-struggling-sell-house-22759448",
+        "urlToImage": "https://i2-prod.mirror.co.uk/incoming/article22760159.ece/ALTERNATES/s1200/0_PHP_NYL_250920_house_004.jpg",
+        "publishedAt": "2020-09-29T10:43:00Z",
+        "content": "Estate agents struggling to sell a £250,000 house next to a graveyard are throwing in a creepy extra feature.\r\nThe three-bedroom centuries old home comes with a plot in the graveyard as an \"unusual\" … [+2048 chars]"
+      },
+      {
+        "source": { "id": "the-verge", "name": "The Verge" },
+        "author": "James Vincent",
+        "title": "Epic’s decision to bypass Apple’s App Store policies were dishonest, says US judge - The Verge",
+        "description": "Epic’s decision to bypass Apple’s App Store policies by sneaking a version of Fortnite onto iOS with its own payment system was dishonest, according to a US judge. Judge Yvonne Gonzalez Rogers heard initial arguments from both Epic and Apple on Monday. She re…",
+        "url": "https://www.theverge.com/2020/9/29/21493096/epic-apple-antitrust-lawsuit-fortnite-app-store-court-hearing",
+        "urlToImage": "https://cdn.vox-cdn.com/thumbor/xRzG_14QKMMKXUGWwfTqBXvbNVo=/0x146:2040x1214/fit-in/1200x630/cdn.vox-cdn.com/uploads/chorus_asset/file/21769162/vpavic_180607_2652_0089.jpg",
+        "publishedAt": "2020-09-29T10:29:45Z",
+        "content": "A court hearing suggests Epics arguments arent being well received\r\nPhoto by Amelia Holowaty Krales\r\nA US judge hearing arguments in Epics antitrust lawsuit against Apple has criticized the game deve… [+3515 chars]"
+      },
+      {
+        "source": { "id": null, "name": "Liverpool Echo" },
+        "author": "George Morgan",
+        "title": "Wirral’s coronavirus cases rocketing as lockdown fears grow - Liverpool Echo",
+        "description": "Huge numbers across Merseyside may force the government to act",
+        "url": "https://www.liverpoolecho.co.uk/news/liverpool-news/wirrals-coronavirus-cases-rocketing-lockdown-19015574",
+        "urlToImage": "https://i2-prod.liverpoolecho.co.uk/incoming/article18960043.ece/ALTERNATES/s1200/1_Coronavirus-Tue-Sep-15-2020.jpg",
+        "publishedAt": "2020-09-29T10:28:00Z",
+        "content": "Wirrals coronavirus infections are rocketing and new restrictions to curb the rise may be announced this week.\r\nThe borough's infection rate is now 160 per 100,000 residents, with 517 coronavirus cas… [+2830 chars]"
+      },
+      {
+        "source": { "id": null, "name": "Eurogamer.net" },
+        "author": "Will Judd",
+        "title": "Get 20 per cent off all SteelSeries headsets, mice and keyboards - Eurogamer.net",
+        "description": "SteelSeries is running a store-wide 20% off sale today, with discounts on some of the best headsets for PlayStation 5 and Xbox Series X|S.",
+        "url": "https://www.eurogamer.net/articles/digitalfoundry-2020-09-29-20-per-cent-off-steelseries-headsets-mice-keyboards",
+        "urlToImage": "https://d2skuhm0vrry40.cloudfront.net/2020/articles/2020-09-29-11-11/20-per-cent-off-steelseries-headsets-mice-keyboards-1601374298915.jpg/EG11/resize/1200x-1/20-per-cent-off-steelseries-headsets-mice-keyboards-1601374298915.jpg",
+        "publishedAt": "2020-09-29T10:21:00Z",
+        "content": "Fancy a new headset, mouse or keyboard for your PC, Xbox or PlayStation? Today is a good day to upgrade, as SteelSeries has discounted everything on their store by 20 per cent, including some of the … [+2209 chars]"
+      }
+    ]
+  }
+}
