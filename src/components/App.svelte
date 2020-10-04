@@ -13,11 +13,13 @@
   let selectedCategory = Category.technology;
   let selectedCountry = Country.gb;
   let searchTerm = undefined;
+  let page = 1;
+  let pageSize = 20;
 
   onMount(() => fetchNews());
 
   function fetchNews() {
-    getNewsByCategory(selectedCategory, selectedCountry, searchTerm);
+    getNewsByCategory(selectedCategory, selectedCountry, page, searchTerm);
   }
 
   function onCategoryChange(category: Category) {
@@ -62,6 +64,19 @@
     justify-content: flex-end;
   }
 </style>
+
+<svelte:window
+  on:scroll={() => {
+    console.log(window.pageYOffset + document.body.clientHeight, document.body.scrollHeight);
+
+    const hasMore = $totalResults > page * pageSize;
+    const shouldLoadMore = window.pageYOffset + document.body.clientHeight > document.body.scrollHeight - 100;
+
+    if (hasMore && shouldLoadMore && !isLoading) {
+      page += 1;
+      fetchNews();
+    }
+  }} />
 
 <main>
   <div class="top-bar">
