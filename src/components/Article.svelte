@@ -1,12 +1,7 @@
 <script lang="ts">
-  import type { Article } from './api';
+  import type { Article } from '../util/types';
 
   export let article: Article;
-
-  let date = article.publishedAt && new Date(article.publishedAt);
-  let formattedDate = `${date.toDateString()} ${date
-    .toTimeString()
-    .substr(0, 5)}`;
 </script>
 
 <style>
