@@ -20,6 +20,10 @@
     color: inherit;
   }
 
+  li {
+    transition: background-color 0.3s;
+  }
+
   li:hover {
     background-color: #f1f1f1;
   }

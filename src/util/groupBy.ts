@@ -6,7 +6,7 @@
  *
  * @returns {Map} A map of the grouped elements
  */
-export function groupBy<T, K>(list: T[], keyGetter: (i: T) => K): Map<K, T> {
+export function groupBy<T, K>(list: T[], keyGetter: (i: T) => K): Map<K, T[]> {
   const map = new Map();
 
   list.forEach((item) => {

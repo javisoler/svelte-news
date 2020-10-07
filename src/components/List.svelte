@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { articles } from '../util/articlesStore';
+  import { articles } from '../stores/articles';
 
   import Article from './Article.svelte';
 </script>
@@ -17,7 +17,7 @@
     font-size: 13px;
     padding: 8px 10px;
     position: sticky;
-    top: 0;
+    top: 37px;
   }
 </style>
 
