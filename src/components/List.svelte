@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { articles } from '../util/articlesStore';
+  import { articles } from '../stores/articlesStore';
 
   import Article from './Article.svelte';
 </script>

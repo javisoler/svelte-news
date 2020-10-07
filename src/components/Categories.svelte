@@ -1,12 +1,32 @@
 <script lang="ts">
+  import { onMount } from 'svelte';
   import { Category } from '../util/types';
 
   export let onChange: (category: Category) => void;
   export let selectedCategory: Category;
 
-  function handleClick(category: Category) {
-    onChange && onChange(category);
+  let navigation: HTMLElement;
+
+  function handleClick(event) {
+    if (onChange) {
+      const target = event.target as HTMLLIElement;
+      onChange(target.dataset['category'] as Category);
+      target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'end',
+        inline: 'center',
+      });
+    }
   }
+
+  onMount(() => {
+    const target = navigation.querySelector('li.active');
+    target.scrollIntoView({
+      behavior: 'smooth',
+      block: 'end',
+      inline: 'center',
+    });
+  });
 </script>
 
 <style>
@@ -14,16 +34,17 @@
     position: sticky;
     top: 0;
     z-index: 1;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
   }
 
   ul {
     padding: 0;
     margin: 0;
     list-style: none;
-    width: 100%;
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
   }
 
   li {
@@ -54,17 +75,6 @@
     cursor: pointer;
   }
 
-  @media screen and (max-width: 690px) {
-    ul {
-      flex-direction: column;
-    }
-    li {
-      border-top: none;
-      border-right: none;
-      flex-basis: 20px;
-    }
-  }
-
   .active {
     background-color: crimson;
     border-bottom-color: crimson;
@@ -72,12 +82,13 @@
   }
 </style>
 
-<nav>
+<nav bind:this={navigation}>
   <ul>
     {#each Object.values(Category) as category}
       <li
         class:active={category === selectedCategory}
-        on:click={() => handleClick(category)}>
+        on:click={handleClick}
+        data-category={category}>
         {category}
       </li>
     {/each}

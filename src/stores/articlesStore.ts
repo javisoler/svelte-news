@@ -1,5 +1,5 @@
 import { writable } from 'svelte/store';
-import type { GroupedArticles } from './types';
+import type { GroupedArticles } from '../util/types';
 
 export const articles = writable<GroupedArticles>({});
 

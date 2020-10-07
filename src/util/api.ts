@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { groupBy } from '../util/groupBy';
 
-import { articles, isLoading, error, totalResults } from './articlesStore';
+import { articles, isLoading, error, totalResults } from '../stores/articlesStore';
 import type {
   Category,
   Country,

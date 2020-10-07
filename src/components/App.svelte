@@ -9,7 +9,7 @@
 
   import { Category, Country } from '../util/types';
   import { getNewsByCategory } from '../util/api';
-  import { isLoading, error, totalResults } from '../util/articlesStore';
+  import { isLoading, error, totalResults } from '../stores/articlesStore';
 
   let selectedCategory = Category.technology;
   let selectedCountry = Country.gb;
