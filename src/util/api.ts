@@ -1,23 +1,30 @@
 import axios from 'axios';
 import { groupBy } from '../util/groupBy';
 
-import { articles, isLoading, totalResults } from './articlesStore';
-import type { Category, Country, NewsByCategoryRes } from './types';
+import { articles, isLoading, error, totalResults } from './articlesStore';
+import type {
+  Category,
+  Country,
+  GroupedArticles,
+  NewsByCategoryRes,
+} from './types';
 
 const baseUrlHeadlines = 'https://newsapi.org/v2/top-headlines';
 const pageSize = '20';
 
 const CACHE_NAME = 'svelte-news';
-const CACHE_DURATION = 300000; // 5 minutes in ms
+const CACHE_DURATION = 1800000; // 5 minutes in ms
 
 export async function getNewsByCategory(
   category: Category,
   country: Country,
   page = 1,
-  searchTerm?: string
+  searchTerm?: string,
+  invalidate = false
 ): Promise<void> {
   try {
     isLoading.set(true);
+    error.set(null);
 
     let data: NewsByCategoryRes;
 
@@ -50,43 +57,55 @@ export async function getNewsByCategory(
 
       if (expiration && new Date(expiration) > new Date())
         data = await cachedRes.json();
-      else console.log('cache expired!', url);
     }
 
     if (!data) {
-      const res = await axios.get(url, { headers: options.headers });
-
-      data = res && res.data;
-
       try {
+        const res = await axios.get(url, { headers: options.headers });
+
+        data = res && res.data;
+
         const expiration = new Date(Date.now() + CACHE_DURATION).toISOString();
         const response = new Response(JSON.stringify(res.data), {
           headers: { 'app-cache-expiration': expiration },
         });
-        console.log(response, response.headers.get('app-cache-expiration'));
 
         await cache.put(url, response);
-      } catch (error) {
-        console.log(error);
+      } catch (err) {
+        console.log(err);
+        error.set(err.message);
       }
     }
 
     if (data) {
-      const groupedArticles = groupBy(data.articles, (item) =>
+      const groupedArticlesMap = groupBy(data.articles, (item) =>
         item.publishedAt.substr(0, 10)
       );
 
-      const groups = {};
-      for (let [key, value] of groupedArticles) groups[key] = value;
+      const groups: GroupedArticles = {};
+      for (let [key, value] of groupedArticlesMap) groups[key] = value;
 
-      articles.set(groups);
+      if (invalidate) articles.set(groups);
+      else updateArticles(groups);
+
       totalResults.set(data.totalResults);
     }
-
-    isLoading.set(false);
-  } catch (error) {
-    __DEV__ && console.log(error);
+  } catch (err) {
+    __DEV__ && console.log(err);
+    error.set(err.message);
   }
+
+  isLoading.set(false);
+}
+
+function updateArticles(newData: GroupedArticles) {
+  articles.update((data) => {
+    for (const date in newData) {
+      data[date] = [...(data[date] ? data[date] : []), ...newData[date]];
+    }
+
+    return data;
+  });
 }
 
 const timer = (time = 1000) =>

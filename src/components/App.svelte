@@ -5,10 +5,11 @@
   import Countries from './Countries.svelte';
   import Input from './Input.svelte';
   import List from './List.svelte';
+  import Loader from './Loader.svelte';
 
   import { Category, Country } from '../util/types';
   import { getNewsByCategory } from '../util/api';
-  import { isLoading, totalResults } from '../util/articlesStore';
+  import { isLoading, error, totalResults } from '../util/articlesStore';
 
   let selectedCategory = Category.technology;
   let selectedCountry = Country.gb;
@@ -16,25 +17,47 @@
   let page = 1;
   let pageSize = 20;
 
+  $: hasMore = $totalResults > page * pageSize;
+
   onMount(() => fetchNews());
 
-  function fetchNews() {
-    getNewsByCategory(selectedCategory, selectedCountry, page, searchTerm);
+  function fetchNews(invalidate = false) {
+    getNewsByCategory(
+      selectedCategory,
+      selectedCountry,
+      page,
+      searchTerm,
+      invalidate
+    );
   }
 
   function onCategoryChange(category: Category) {
     selectedCategory = category;
-    fetchNews();
+    page = 1;
+    fetchNews(true);
   }
 
   function onCountryChange(country: Country) {
     selectedCountry = country;
-    fetchNews();
+    page = 1;
+    fetchNews(true);
   }
 
   function onSearchTermChange(term: string) {
     searchTerm = term;
-    fetchNews();
+    page = 1;
+    fetchNews(true);
+  }
+
+  function onScrollWindow() {
+    const shouldLoadMore =
+      window.pageYOffset + document.body.clientHeight >
+      document.body.scrollHeight - 100;
+
+    if (hasMore && shouldLoadMore && !$isLoading) {
+      page = page + 1;
+      fetchNews();
+    }
   }
 </script>
 
@@ -65,18 +88,7 @@
   }
 </style>
 
-<svelte:window
-  on:scroll={() => {
-    console.log(window.pageYOffset + document.body.clientHeight, document.body.scrollHeight);
-
-    const hasMore = $totalResults > page * pageSize;
-    const shouldLoadMore = window.pageYOffset + document.body.clientHeight > document.body.scrollHeight - 100;
-
-    if (hasMore && shouldLoadMore && !isLoading) {
-      page += 1;
-      fetchNews();
-    }
-  }} />
+<svelte:window on:scroll={onScrollWindow} />
 
 <main>
   <div class="top-bar">
@@ -90,12 +102,20 @@
   <Categories onChange={onCategoryChange} {selectedCategory} />
 
   {#if $isLoading}
-    <div class="info">Loading...</div>
+    <Loader />
   {/if}
 
-  {#if $totalResults === 0 && !$isLoading}
+  {#if !$isLoading && $error}
+    <div class="info">{$error}</div>
+  {/if}
+
+  {#if $totalResults === 0 && !$isLoading && !$error}
     <div class="info">No results!</div>
   {:else}
     <List />
+  {/if}
+
+  {#if hasMore}
+    <Loader />
   {/if}
 </main>

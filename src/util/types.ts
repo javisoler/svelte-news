@@ -37,6 +37,8 @@ export interface NewsByCategoryRes {
   articles: Article[];
 }
 
+export type GroupedArticles = { [date: string]: Article[] };
+
 export enum Country {
   ae = 'ae',
   ar = 'ar',

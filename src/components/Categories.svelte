@@ -10,6 +10,12 @@
 </script>
 
 <style>
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+
   ul {
     padding: 0;
     margin: 0;

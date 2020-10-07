@@ -17,7 +17,7 @@
     font-size: 13px;
     padding: 8px 10px;
     position: sticky;
-    top: 0;
+    top: 37px;
   }
 </style>
 
