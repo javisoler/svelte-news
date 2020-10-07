@@ -10,12 +10,15 @@
   function handleClick(event) {
     if (onChange) {
       const target = event.target as HTMLLIElement;
+
       onChange(target.dataset['category'] as Category);
+
       target.scrollIntoView({
         behavior: 'smooth',
         block: 'end',
         inline: 'center',
       });
+      window.scroll({ top: 0 });
     }
   }
 

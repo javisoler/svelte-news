@@ -8,21 +8,21 @@
   import Loader from './Loader.svelte';
 
   import { Category, Country } from '../util/types';
-  import { getNewsByCategory } from '../util/api';
-  import { isLoading, error, totalResults } from '../stores/articlesStore';
+  import { getHeadlines } from '../util/api';
+  import { pageSize } from '../util/constants';
+  import { isLoading, error, totalResults } from '../stores/articles';
 
   let selectedCategory = Category.technology;
   let selectedCountry = Country.gb;
   let searchTerm = undefined;
   let page = 1;
-  let pageSize = 20;
 
   $: hasMore = $totalResults > page * pageSize;
 
   onMount(() => fetchNews());
 
   function fetchNews(invalidate = false) {
-    getNewsByCategory(
+    getHeadlines(
       selectedCategory,
       selectedCountry,
       page,

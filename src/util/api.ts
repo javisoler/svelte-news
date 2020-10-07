@@ -1,7 +1,16 @@
 import axios from 'axios';
 import { groupBy } from '../util/groupBy';
 
-import { articles, isLoading, error, totalResults } from '../stores/articlesStore';
+import { articles, isLoading, error, totalResults } from '../stores/articles';
+
+import {
+  pageSize,
+  baseUrlHeadlines,
+  requestOptions,
+  CACHE_DURATION,
+  CACHE_NAME,
+} from './constants';
+
 import type {
   Category,
   Country,
@@ -9,13 +18,16 @@ import type {
   NewsByCategoryRes,
 } from './types';
 
-const baseUrlHeadlines = 'https://newsapi.org/v2/top-headlines';
-const pageSize = '20';
-
-const CACHE_NAME = 'svelte-news';
-const CACHE_DURATION = 1800000; // 5 minutes in ms
-
-export async function getNewsByCategory(
+/**
+ * Get Headlines based on the provided filters
+ *
+ * @param category
+ * @param country
+ * @param page
+ * @param searchTerm
+ * @param invalidate
+ */
+export async function getHeadlines(
   category: Category,
   country: Country,
   page = 1,
@@ -31,7 +43,7 @@ export async function getNewsByCategory(
     const urlParams = new URLSearchParams({
       country,
       category,
-      pageSize,
+      pageSize: String(pageSize),
       page: String(page),
     });
     if (searchTerm) urlParams.append('searchTerm', searchTerm);
@@ -41,41 +53,9 @@ export async function getNewsByCategory(
 
     const url = urlObj.toString();
 
-    const options: RequestInit = {
-      method: 'GET',
-      headers: {
-        'X-Api-Key': NEWSAPI_KEY,
-      },
-    };
+    data = await getCachedData(url);
 
-    const cache = await caches.open(CACHE_NAME);
-
-    const cachedRes = await caches.match(url);
-
-    if (cachedRes) {
-      const expiration = cachedRes.headers.get('app-cache-expiration');
-
-      if (expiration && new Date(expiration) > new Date())
-        data = await cachedRes.json();
-    }
-
-    if (!data) {
-      try {
-        const res = await axios.get(url, { headers: options.headers });
-
-        data = res && res.data;
-
-        const expiration = new Date(Date.now() + CACHE_DURATION).toISOString();
-        const response = new Response(JSON.stringify(res.data), {
-          headers: { 'app-cache-expiration': expiration },
-        });
-
-        await cache.put(url, response);
-      } catch (err) {
-        console.log(err);
-        error.set(err.message);
-      }
-    }
+    if (!data) data = await fetchHeadlines(url);
 
     if (data) {
       const groupedArticlesMap = groupBy(data.articles, (item) =>
@@ -98,6 +78,64 @@ export async function getNewsByCategory(
   isLoading.set(false);
 }
 
+/**
+ * Get cached data for the url.
+ *
+ * @param url
+ */
+async function getCachedData(url: string) {
+  let data: NewsByCategoryRes;
+
+  try {
+    const cachedRes = await caches.match(url);
+
+    if (cachedRes) {
+      const expiration = cachedRes.headers.get('app-cache-expiration');
+
+      if (expiration && new Date(expiration) > new Date())
+        data = await cachedRes.json();
+    }
+  } catch (err) {
+    console.log(err);
+    error.set(err.message);
+  }
+
+  return data;
+}
+
+/**
+ * Fetch data from the API and store it in the cache.
+ *
+ * @param url
+ */
+async function fetchHeadlines(url: string) {
+  let data: NewsByCategoryRes;
+
+  try {
+    const res = await axios.get(url, { headers: requestOptions.headers });
+
+    data = res && res.data;
+
+    const expiration = new Date(Date.now() + CACHE_DURATION).toISOString();
+    const response = new Response(JSON.stringify(res.data), {
+      headers: { 'app-cache-expiration': expiration },
+    });
+
+    const cache = await caches.open(CACHE_NAME);
+    await cache.put(url, response);
+  } catch (err) {
+    console.log(err);
+    error.set(err.message);
+  }
+
+  return data;
+}
+
+/**
+ * Append new data to the existing lists of articles
+ *
+ * @param newData
+ */
 function updateArticles(newData: GroupedArticles) {
   articles.update((data) => {
     for (const date in newData) {
@@ -107,6 +145,3 @@ function updateArticles(newData: GroupedArticles) {
     return data;
   });
 }
-
-const timer = (time = 1000) =>
-  new Promise((res) => setTimeout(() => res(), time));
